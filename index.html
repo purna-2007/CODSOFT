@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Dokala Purna | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- PDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HERO SECTION -->
+
+<div class="hero">
+
+<img src="images/profile.jpeg" class="profile-pic">
+
+<h1>PURNA DOKALA</h1>
+
+<p class="hero-subtitle">
+Engineering Student | Web Development Learner 
+</p>
+
+</div>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<ul class="nav-menu">
+
+<li><a href="#profile">Profile</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<hr>
+
+<!-- PROFILE -->
+
+<section id="profile">
+
+<h2>PROFILE</h2>
+
+<p>
+I am purna dokala, Bachelor of Engineering student with foundational knowledge in data extraction and basic web technologies.
+I consider myself a responsible and organized person with a strong interest in Smart City systems,
+digital governance, and automation of real-world processes.
+</p>
+
+</section>
+
+<hr>
+
+<!-- LANGUAGES -->
+
+<section>
+
+<h2>LANGUAGES</h2>
+
+<ul>
+<li>Native Telugu</li>
+<li>English</li>
+</ul>
+
+</section>
+
+<hr>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2>PROJECTS</h2>
+
+<ul>
+
+<li>
+<b>Wine Price Prediction</b><br>
+<a href="https://github.com/purna-2007/wine-_quality_-prediction" target="_blank">
+View Project on GitHub
+</a>
+</li>
+
+<br>
+
+<li>
+<b>Apple Close Price Prediction</b><br>
+<a href="https://github.com/purna-2007/Apple_stock_close_price_prediction" target="_blank">
+View Project on GitHub
+</a>
+</li>
+
+<br>
+
+<li>
+<b>Hyderabad House Price Prediction</b><br>
+<a href="https://github.com/purna-2007/house_price_prediction" target="_blank">
+View Project on GitHub
+</a>
+</li>
+
+</ul>
+
+</section>
+
+<hr>
+
+<!-- DOWNLOAD PORTFOLIO PDF -->
+
+<section id="portfolio">
+
+<h2>DOWNLOAD PORTFOLIO</h2>
+
+<button onclick="downloadPDF()" class="btn">
+Download Portfolio (PDF)
+</button>
+
+</section>
+
+<hr>
+
+<!-- GRID -->
+
+<div class="grid">
+
+<div>
+
+<h2>EDUCATION</h2>
+
+<p><b>2024 – 2028</b></p>
+
+<p>
+Kakinada Institute of Engineering Technology for Women <br>
+Korangi
+</p>
+
+<h2>CERTIFICATIONS</h2>
+
+<ul>
+<li>Basics of Python Certification – Infosys Springboard</li>
+<li>Artificial Intelligence</li>
+</ul>
+
+</div>
+
+<div id="skills">
+
+<h2>SKILLS</h2>
+
+<ul>
+<li>Frontend Development</li>
+<li>Python Basics</li>
+<li>Basics of HTML / CSS</li>
+<li>Basics of Machine Learning</li>
+</ul>
+
+</div>
+
+</div>
+
+<hr>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>CONTACT</h2>
+
+<p>📞 8790047698</p>
+<p>✉️ purnadokala@gmail.com</p>
+<p>📍 West Godavari, Polavaram</p>
+
+</section>
+
+<hr>
+
+<footer>
+
+<p>© 2026 Dokala Purna. All Rights Reserved.</p>
+
+</footer>
+
+</div>
+
+<!-- JAVASCRIPT FOR PDF -->
+
+<script>
+function downloadPDF(){
+
+const element = document.querySelector(".container");
+
+const options = {
+margin: 10,
+filename: "Dokala_Purna_Portfolio.pdf",
+image: { type: "jpeg", quality: 1 },
+html2canvas: { scale: 2 },
+jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+};
+
+html2pdf().set(options).from(element).save();
+
+}
+</script>
